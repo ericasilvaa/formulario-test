@@ -1,0 +1,91 @@
+  <!-- Desafio de estagio   -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="form-image">
+            <img src="assets/img/cadernosemfundo.png">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+
+                    <h1>Cadastro de Produto</h1>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Nome do Produto">Nome do Produto</label>
+                        <input placeholder="Digite o nome do produto " type="text" id="Nome do Produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Valor do Produto">Valor do Produto</label>
+                        <input placeholder="Digite o valor do produto " type="number" id="Valor do Produto"  step="0.01" required>
+                    </div>
+
+                    <div class="input-box descricao-input">
+                        <label for="Descrição do Produto" class="descricao-label">Descrição do Produto</label>
+                        <textarea placeholder="Digite  a descrição do produto " id="Descrição do Produto" class="descricao-produto" required></textarea>
+                    </div>
+                    <div class="input-box">
+                        <h4>Disponível para Venda</h4>
+                        <div class="response-inputs">
+                           <input id="Yes"  type="radio" name="response" required>
+                            <label for="Yes">Sim</label>
+                        </div>
+
+                        <div class="response-inputs">
+                            <input id="No" type="radio"  name="response" required>
+                            <label for="No">Não</label>
+                        </div>
+                        
+                        <div class="Salvar-Cadastro">
+                           <!---<button><a href="#">Salvar Cadastro</a></button>--> 
+                           <button id="btnSalvarCadastro">Salvar Cadastro</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </form>
+        </div>
+
+
+        <!-- Lista de Produtos -->
+        <div class="produto-lista" style="display: none;">
+            <h2>Lista de Produtos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aqui você pode preencher dinamicamente a lista de produtos -->
+                    <!-- Exemplo de linha de produto: <tr><td>Nome do Produto</td><td>R$ 10,00</td></tr> -->
+                </tbody>
+            </table>
+            <button onclick="openForm()">Cadastrar Novo Produto</button>
+        </div>
+    </div>
+
+    <!-- Arquivo JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
